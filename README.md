@@ -1,7 +1,7 @@
 # opero-contracts
 
 On-chain receipt anchoring and execution-safety contracts for
-[Project Opero](https://github.com/projectopero).
+[Opero AI](https://github.com/projectopero).
 
 An agent that reports its own results is asking to be trusted. These contracts
 remove that ask for the part that matters: what the agent committed to, and when.
