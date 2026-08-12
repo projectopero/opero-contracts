@@ -3,16 +3,17 @@
 On-chain receipt anchoring and execution-safety contracts for
 [Opero AI](https://github.com/projectopero).
 
-An agent that reports its own results is asking to be trusted. These contracts
-remove that ask for the part that matters: what the agent committed to, and when.
-The commitment is a Merkle root over a batch of trade records, appended in strict
-sequence and never rewritable. Anyone can take a published batch, recompute the
-root with [opero-protocol](https://github.com/projectopero/opero-protocol), and
-compare it to what is on chain.
+These contracts make an agent's published commitments independently checkable.
+Each commitment is a Merkle root over a batch of trade records, appended in
+strict sequence and never rewritable. Anyone can take a published batch,
+recompute the root with
+[opero-protocol](https://github.com/projectopero/opero-protocol), and compare it
+to what is on chain.
 
 The contract stores only the root, so publishing the underlying records stays the
-agent's choice. What it cannot do is change what it already committed, and
-withholding is visible — a root with no published batch is a gap anyone can see.
+agent's choice. It cannot change a batch after committing its root. A root with
+no published batch is a visible gap, but the contract does not prove that every
+trade was committed or that a reported fill matches the venue.
 
 ## Contracts
 
