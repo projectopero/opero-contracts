@@ -28,13 +28,36 @@ it in a minute.
 ## What is not here
 
 The strategy execution graph — vaults, factories, risk manager, venue adapters
-and reference feeds — is not published. It encodes the position logic, and its
-parameters are enforced and readable on chain regardless, so publishing the
-source would give away the approach without adding anything a reviewer cannot
-already verify against the deployed bytecode.
+and reference feeds — is maintained separately. This repository is the source
+for the `AttestationAnchor` instance listed below. The other graph addresses are
+included so a reviewer can follow their on-chain relationships; their presence
+does not imply that their source lives in this repository.
 
-Deployment addresses are published with each finalized release rather than in
-advance. Nothing here is deployed to a production address yet.
+## Robinhood Chain Public V2 deployment
+
+The first Public V2 graph is deployed on Robinhood Chain mainnet (chain ID
+`4663`). Deployment proves that the contracts and their ownership relationships
+exist on chain. It does not by itself mean that an account is funded or that
+live trading is available; current availability is published on the
+[status page](https://projectopero.com/status).
+
+| Component | Address |
+| --- | --- |
+| Execution registry | [`0x6DcAE761c0182F441bDDADed27d4b325E176bd23`](https://robinhoodchain.blockscout.com/address/0x6DcAE761c0182F441bDDADed27d4b325E176bd23) |
+| Cohort factory | [`0xF03081717aa9e3d0dBe98500a9d14113B0c3B25a`](https://robinhoodchain.blockscout.com/address/0xF03081717aa9e3d0dBe98500a9d14113B0c3B25a) |
+| Sequencer feed | [`0x6fa3917Ac833EF34844b8079A6a1E8abFA921E69`](https://robinhoodchain.blockscout.com/address/0x6fa3917Ac833EF34844b8079A6a1E8abFA921E69) |
+| Market reference feed | [`0x6B22A786bAa607d76728168703a39Ea9C99f2cD0`](https://robinhoodchain.blockscout.com/address/0x6B22A786bAa607d76728168703a39Ea9C99f2cD0) |
+| First vault | [`0x3306559d54c62311789769Ad839A8845DA77FbD0`](https://robinhoodchain.blockscout.com/address/0x3306559d54c62311789769Ad839A8845DA77FbD0) |
+| Risk manager | [`0xfa8e535FCc3b641Bf7a68696ADE58e140C3b4A4a`](https://robinhoodchain.blockscout.com/address/0xfa8e535FCc3b641Bf7a68696ADE58e140C3b4A4a) |
+| Spot adapter | [`0x66BDE213b830057D4A99d81769f9871D460c6733`](https://robinhoodchain.blockscout.com/address/0x66BDE213b830057D4A99d81769f9871D460c6733) |
+| Attestation anchor | [`0xB63C7409F1059d9a5Fe95C4e5b7341C7a5E55cCd`](https://robinhoodchain.blockscout.com/address/0xB63C7409F1059d9a5Fe95C4e5b7341C7a5E55cCd) |
+
+The anchor's immutable publisher is the first vault. The graph was created in
+[transaction `0xde3821…6930`](https://robinhoodchain.blockscout.com/tx/0xde3821cfc83e68b78a4597e981cbf1cddd6551e68571dcaddc816d3a04426930),
+and its deployment receipt identity is
+`sha256:679563d8a79094400d9faf77869e4c81b5302de26a7d5fb7ba955ea6293d706f`.
+The complete machine-readable record is in
+[`deployments/robinhood-mainnet-public-v2.json`](deployments/robinhood-mainnet-public-v2.json).
 
 ## Build and test
 

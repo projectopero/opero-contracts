@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "release": "robinhood-public-v2",
+  "chainId": 4663,
+  "explorer": "https://robinhoodchain.blockscout.com",
+  "observedAt": "2026-08-11T23:56:23.026756994Z",
+  "deploymentReceipt": {
+    "identitySha256": "sha256:679563d8a79094400d9faf77869e4c81b5302de26a7d5fb7ba955ea6293d706f",
+    "transactionHash": "0xde3821cfc83e68b78a4597e981cbf1cddd6551e68571dcaddc816d3a04426930",
+    "blockNumber": 34075121,
+    "blockHash": "0xc341779966f69da3d88d36c242132495140ceed660a80ce5d34de66f7080e3ac"
+  },
+  "cohort": {
+    "registry": "0x6DcAE761c0182F441bDDADed27d4b325E176bd23",
+    "factory": "0xF03081717aa9e3d0dBe98500a9d14113B0c3B25a",
+    "maximumGraphs": 20,
+    "capitalCap": {
+      "asset": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+      "symbol": "USDG",
+      "decimals": 6,
+      "raw": "25000000"
+    }
+  },
+  "feeds": {
+    "sequencer": "0x6fa3917Ac833EF34844b8079A6a1E8abFA921E69",
+    "marketReference": "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0"
+  },
+  "firstGraph": {
+    "owner": "0x747104751eB4B843FCA221AD300cf50790433496",
+    "vault": "0x3306559d54c62311789769Ad839A8845DA77FbD0",
+    "riskManager": "0xfa8e535FCc3b641Bf7a68696ADE58e140C3b4A4a",
+    "spotAdapter": "0x66BDE213b830057D4A99d81769f9871D460c6733",
+    "attestationAnchor": {
+      "address": "0xB63C7409F1059d9a5Fe95C4e5b7341C7a5E55cCd",
+      "publisher": "0x3306559d54c62311789769Ad839A8845DA77FbD0",
+      "runtimeCodeHash": "0x03cdc48bd228651083a4560ff9e63358cf045a9f0e86b60317229b72af27cf44",
+      "source": "src/AttestationAnchor.sol"
+    }
+  },
+  "availability": "https://projectopero.com/status"
+}
