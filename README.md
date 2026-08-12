@@ -53,6 +53,14 @@ live trading is available; current availability is published on the
 | Spot adapter | [`0x66BDE213b830057D4A99d81769f9871D460c6733`](https://robinhoodchain.blockscout.com/address/0x66BDE213b830057D4A99d81769f9871D460c6733) |
 | Attestation anchor | [`0xB63C7409F1059d9a5Fe95C4e5b7341C7a5E55cCd`](https://robinhoodchain.blockscout.com/address/0xB63C7409F1059d9a5Fe95C4e5b7341C7a5E55cCd) |
 
+The deployed risk manager and spot adapter have matching entry and exit routes
+for 16 markets: `AAPL`, `AMD`, `AMZN`, `COIN`, `GOOGL`, `INTC`, `META`, `MSFT`,
+`MU`, `NVDA`, `PLTR`, `QQQ`, `SNDK`, `SPCX`, `SPY` and `TSLA`. The account may
+hold inventory in only one of those markets at a time. NVDA is bound to stock
+token `0xd060…D9EEC`, reference feed `0x379E…E9F15`, its USDG pool and Lighter
+market `110`. Route configuration proves execution coverage, not that trading
+has started or that an order will qualify under current market conditions.
+
 The anchor's immutable publisher is the first vault. The graph was created in
 [transaction `0xde3821…6930`](https://robinhoodchain.blockscout.com/tx/0xde3821cfc83e68b78a4597e981cbf1cddd6551e68571dcaddc816d3a04426930),
 and its deployment receipt identity is

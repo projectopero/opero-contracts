@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "release": "robinhood-public-v2",
   "chainId": 4663,
   "explorer": "https://robinhoodchain.blockscout.com",
@@ -24,6 +24,36 @@
   "feeds": {
     "sequencer": "0x6fa3917Ac833EF34844b8079A6a1E8abFA921E69",
     "marketReference": "0x6B22A786bAa607d76728168703a39Ea9C99f2cD0"
+  },
+  "marketMandate": {
+    "marketCount": 16,
+    "maximumActiveMarkets": 1,
+    "symbols": [
+      "AAPL",
+      "AMD",
+      "AMZN",
+      "COIN",
+      "GOOGL",
+      "INTC",
+      "META",
+      "MSFT",
+      "MU",
+      "NVDA",
+      "PLTR",
+      "QQQ",
+      "SNDK",
+      "SPCX",
+      "SPY",
+      "TSLA"
+    ],
+    "nvda": {
+      "stockToken": "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
+      "referenceFeed": "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+      "poolId": "0x3bb34a44f1b2b5f32c034c38a53065a521a47b199700fa9bd19d60985ff24bf1",
+      "lighterMarketId": 110,
+      "entryEnabled": true,
+      "exitEnabled": true
+    }
   },
   "firstGraph": {
     "owner": "0x747104751eB4B843FCA221AD300cf50790433496",
